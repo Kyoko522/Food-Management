@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "804605480372",
+    "project_id": "food-management-app-a0ae0",
+    "storage_bucket": "food-management-app-a0ae0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804605480372:android:3e93b51bcfd3b96b0ef6e1",
+        "android_client_info": {
+          "package_name": "com.example.pacsxvirofoodmanagementapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQpywO58W-_TyrMckipZGufRWd6ES0SKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
