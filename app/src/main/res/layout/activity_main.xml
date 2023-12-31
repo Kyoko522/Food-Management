@@ -14,7 +14,9 @@
         android:layout_height="100dp"
         android:src="@drawable/logo"
         android:id="@+id/icon"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:contentDescription="icon"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/username"
@@ -23,7 +25,8 @@
         android:layout_below="@+id/icon"
         android:layout_marginTop="16dp"
         android:text="Username"
-        android:gravity="center"/>
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="match_parent"
@@ -32,23 +35,26 @@
         android:id="@+id/password"
         android:layout_below="@+id/username"
         android:layout_marginTop="16dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/login"
-        android:text="login"
+        android:text="Login"
         android:layout_below="@+id/password"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:id="@+id/register"
+        android:id="@+id/to_register_page"
         android:layout_below="@+id/login"
         android:layout_marginTop="1dp"
         android:background="@android:color/transparent"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>
