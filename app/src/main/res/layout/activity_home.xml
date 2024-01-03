@@ -1,0 +1,230 @@
+<!-- res/layout/activity_main.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+    
+    <!-- Top Bar with "to go!" and Logo -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:padding="16dp">
+        
+        <ImageView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to go!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    
+    </RelativeLayout>
+    
+    <!-- Information text below the top bar -->
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:text="Tap an entry to see more details"
+        android:textColor="@android:color/black"/>
+    
+    <!-- Dynamic Cards with alternating background colors -->
+    <LinearLayout
+        android:id="@+id/cardsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infoText"
+        android:orientation="vertical"
+        android:padding="16dp">
+        
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/light_blue"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+            
+            <!-- Card Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:onClick="card"
+                android:padding="16dp"
+                android:background="@color/light_green">
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Club Name:"/>
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Pickup Location:"/>
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Stock Left:"/>
+                
+                <!-- Progress Bar with Labels -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+                    
+                    <!-- Customized Progress Bar -->
+                    <ProgressBar
+                        android:id="@+id/stockProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:max="100"
+                        android:progress="25"
+                        android:progressDrawable="@android:color/darker_gray"/>
+                    
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stockProgressBar"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="8dp">
+                        
+                        <!-- Intervals Labels -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1-10"
+                                android:textColor="@android:color/black" />
+                            
+                            <TextView
+                                android:layout_width="2dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="10-25"
+                                android:textColor="@android:color/black" />
+                            
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:text=""
+                                android:textColor="@android:color/black" />
+                            
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:text="25-50"
+                                android:textColor="@android:color/black" />
+                            
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="50+"
+                                android:textColor="@android:color/black"
+                                android:layout_gravity="end" />
+                        
+                        </LinearLayout>
+                    </RelativeLayout>
+                
+                
+                </RelativeLayout>
+            
+            </LinearLayout>
+        
+        </androidx.cardview.widget.CardView>
+        
+        <!-- Add more CardViews dynamically based on the data from the database -->
+        
+    
+    </LinearLayout>
+    
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_green"
+        android:orientation="horizontal">
+        
+        <!-- Button 1 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent" />
+        
+        <!-- Vertical Line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray" />
+        
+        <!-- Button 2 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button2"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent" />
+        
+        <!-- Vertical Line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray" />
+        
+        <!-- Button 3 -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button3"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent" />
+    
+    </LinearLayout>
+
+</RelativeLayout>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ffeee3"
+    android:background="@color/bg"
     android:gravity="center">
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/icon"
         android:layout_marginTop="16dp"
-        android:text="Username"
+        android:text="Email"
         android:gravity="center"
         tools:ignore="HardcodedText" />
 
