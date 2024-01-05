@@ -1,0 +1,110 @@
+<!-- res/layout/card_item.xml -->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp">
+    
+    <!-- Card Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/light_green">
+        
+        <TextView
+            android:id="@+id/clubName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Club Name:"/>
+        
+        <TextView
+            android:id="@+id/pickupLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Pickup Location:"/>
+        
+        <TextView
+            android:id="@+id/stockLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Stock Left:"/>
+        
+        <!-- Additional views go here -->
+        
+        <!-- Customized Progress Bar -->
+        <ProgressBar
+            android:id="@+id/stockProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="25"
+            android:progressDrawable="@android:color/darker_gray"/>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stockProgressBar"
+            android:paddingTop="1dp"
+            android:paddingBottom="8dp">
+            
+            <!-- Intervals Labels -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1-10"
+                    android:textColor="@android:color/black" />
+                
+                <TextView
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="10-25"
+                    android:textColor="@android:color/black" />
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="@android:color/black" />
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="25-50"
+                    android:textColor="@android:color/black" />
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="50+"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="end" />
+            
+            </LinearLayout>
+        </RelativeLayout>
+    
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
