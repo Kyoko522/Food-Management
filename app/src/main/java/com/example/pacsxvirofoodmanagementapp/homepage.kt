@@ -1,13 +1,16 @@
 package com.example.pacsxvirofoodmanagementapp
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.CheckBox
+import android.widget.GridLayout
+import android.widget.GridView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import com.example.pacsxvirofoodmanagementapp.CardData
 
 class homepage : AppCompatActivity() {
@@ -18,27 +21,37 @@ class homepage : AppCompatActivity() {
         // Get reference to the cardsContainer
         val cardsContainer: LinearLayout = findViewById(R.id.cardsContainer)
 
-        // Create a static card data
-        val cardData = CardData(
-            "Pacs", "Location A", "20",
-            "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm",
-            false, true, true, true, true, false, false, false, false, false, true, true
+        // Create a list of static card data
+        val cardDataList = listOf(
+            CardData("PACS", "Location A", "20", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", false, true, true, true, true, false, false, false, false, false, true, true),
+            CardData("VIRO", "KHW 224", "60", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "8pm", false, true, true, true, true, false, false, false, false, true, true, false),
+            CardData("PACS", "Location B", "25", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", false, true, true, true, true, false, false, false, false, false, true, true),
+
+        // Add more card data as needed
         )
 
-        val cardData2 = CardData(
-            "Pacs", "Location A", "20",
-            "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "8pm",
-            false, true, true, true, true, false, false, false, false, false, true, true
-        )
+        // Iterate through the list of card data and create card views
+        cardDataList.forEachIndexed { index, cardData ->
+            val cardView = createCardView(cardData)
 
-        // Create and add the card view
-        val cardView = createCardView(cardData)
-        cardsContainer.addView(cardView)
+            // Alternate background colors based on the position
+            val backgroundColor = if (index % 2 == 0) {
+                ContextCompat.getColor(this, R.color.light_blue)
+            } else {
+                ContextCompat.getColor(this, R.color.light_green)
+            }
 
-        val cardView2 = createCardView(cardData2)
-        cardsContainer.addView(cardView2)
+            cardView.findViewById<LinearLayout>(R.id.cardContentLayout).setBackgroundColor(backgroundColor)
+//            cardView.findViewById<LinearLayout>(R.id.card_popup).setBackgroundColor(backgroundColor)
+//            cardView.findViewById<GridLayout>(R.id.grid_popup).setBackgroundColor(backgroundColor)
 
-        // You can add more cards by repeating the above process
+            // Set click listener to show the pop-up
+            cardView.setOnClickListener {
+                showPopup(cardData)
+            }
+
+            cardsContainer.addView(cardView)
+        }
     }
 
     private fun createCardView(cardData: CardData): View {
@@ -88,5 +101,30 @@ class homepage : AppCompatActivity() {
         }
 
         return cardView
+    }
+
+    private fun showPopup (cardData: CardData){
+        // Create a dialog
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.card_pop_up) // Assuming you have a layout for the pop-up
+
+        // Find views in the dialog layout
+        val clubNameTextView: TextView = dialog.findViewById(R.id.clubName)
+        val pickupLocationTextView: TextView = dialog.findViewById(R.id.pickupLocation)
+        val stockLeftTextView: TextView = dialog.findViewById(R.id.stockLeft)
+        val descriptionTextView: TextView = dialog.findViewById(R.id.description)
+        val availabilityTextView: TextView = dialog.findViewById(R.id.availability)
+
+        // Set data to the views
+        clubNameTextView.text = "Club Name: ${cardData.club_name}"
+        pickupLocationTextView.text = "Pickup Location: ${cardData.pickup_location}"
+        stockLeftTextView.text = "Stock Left: ${cardData.stock_left}"
+        descriptionTextView.text = "Description: ${cardData.description}"
+        availabilityTextView.text = "Availability: ${cardData.availability}"
+
+        // Add more views and data as needed
+
+        // Show the dialog
+        dialog.show()
     }
 }
