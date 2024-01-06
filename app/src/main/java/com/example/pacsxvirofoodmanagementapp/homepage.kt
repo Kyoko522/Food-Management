@@ -23,6 +23,9 @@ class homepage : AppCompatActivity() {
             CardData("PACS", "Location A", "20", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", true, true, true, true, true, true, true, true, true, true, true, true),
             CardData("VIRO", "KHW 224", "60", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "8pm", false, true, true, true, true, false, false, false, false, true, true, false),
             CardData("MPCU", "Location B", "25", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", false, false, false, false, false, false, false, false, false, false, false, true),
+            CardData("PACS", "Location A", "20", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", true, true, true, true, true, true, true, true, true, true, true, true),
+            CardData("VIRO", "KHW 224", "60", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "8pm", false, true, true, true, true, false, false, false, false, true, true, false),
+            CardData("MPCU", "Location B", "25", "There are 5 pizzas, vegetarian, and meat options are available. All Halal", "6pm", false, false, false, false, false, false, false, false, false, false, false, true),
             // Add more card data as needed
         )
 
