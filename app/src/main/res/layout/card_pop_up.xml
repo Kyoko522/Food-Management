@@ -57,12 +57,7 @@
                 android:textColor="@color/black"
                 android:text="Additional Information: Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
             
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/availability"
-                android:textColor="@color/black"
-                android:text="Time: 10:00 AM - 6:00 PM" />
+          
             
             <!-- fragment_card_popup.xml -->
             <LinearLayout
@@ -194,6 +189,13 @@
                 </androidx.cardview.widget.CardView>
             
             </LinearLayout>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/availability"
+                android:textColor="@color/black"
+                android:text="Time: 10:00 AM - 6:00 PM" />
         
         
         </LinearLayout>
