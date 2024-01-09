@@ -1,11 +1,11 @@
-<!-- res/layout/activity_main.xml -->
+<!-- res/layout/activity_profile.xml -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/bg"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white">
+    tools:context=".activity_profile"
+    android:background="@color/bg">
     
     <!-- Top Bar with "to go!" and Logo -->
     <RelativeLayout
@@ -25,45 +25,93 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To Go!"
+            android:text="Setting"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
     
     </RelativeLayout>
     
-    <!-- Information text below the top bar -->
-    <TextView
-        android:id="@+id/infoText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
         android:layout_below="@id/topBar"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:paddingTop="10dp"
-        android:text="Tap an entry to see more details"
-        android:textColor="@android:color/black"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
     
-<!--    Scrollable Content  -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/infoText">
-        
-    <!-- Dynamic Cards with alternating background colors -->
-    <LinearLayout
-        android:id="@+id/cardsContainer"
+    <!-- Username -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="18sp"
+        android:layout_below="@id/profileImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+    
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/editProfileButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/infoText"
-        android:orientation="vertical"
-        android:padding="16dp">
-        
-        <!-- Add more CardViews dynamically based on the data from the database -->
+        android:text="Edit Profile"
+        android:layout_below="@id/username"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
     
-    </LinearLayout>
+    <!-- Status Button -->
+    <Button
+        android:id="@+id/statusButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Status"
+        android:layout_below="@id/editProfileButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
     
-    </ScrollView>
+    <!-- Settings Button -->
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:layout_below="@id/statusButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+    
+    <!-- Invite a Friend Button -->
+    <Button
+        android:id="@+id/inviteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invite a Friend"
+        android:layout_below="@id/settingsButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+    
+    <!-- Help Button -->
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_below="@id/inviteButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
     
     <!-- Bottom Bar -->
     <LinearLayout
@@ -80,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Home"
-            android:id="@+id/to_home"
+            android:id="@+id/go_home"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
         
@@ -98,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Groups"
-            android:id="@+id/to_groups"
+            android:id="@+id/groups_page"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
         
@@ -116,7 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Profile"
-            android:id="@+id/profileButton"
+            android:id="@+id/to_profile"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
     

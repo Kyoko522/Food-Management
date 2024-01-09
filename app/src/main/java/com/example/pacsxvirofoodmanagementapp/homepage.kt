@@ -1,6 +1,7 @@
 package com.example.pacsxvirofoodmanagementapp
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,27 @@ class homepage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
+
+        //going to the profile page
+        val to_profile: Button = this.findViewById(R.id.profileButton)
+        to_profile.setOnClickListener {
+            val intent = Intent(this, activity_profile::class.java)
+            startActivity(intent)
+        }
+
+        //going to the groups page
+//        val groups_but: Button = this.findViewById(R.id.to_groups)
+//        groups_but.setOnClickListener {
+//            val intent = Intent(this, student_groups::class.java)
+//            startActivity(intent)
+//        }
+
+        //already on the homepage
+        val home_but: Button = findViewById(R.id.to_home)
+        home_but.setOnClickListener {
+            Toast.makeText(this,"Already at home", Toast.LENGTH_SHORT).show()
+        }
+
 
         // Get reference to the cardsContainer
         val cardsContainer: LinearLayout = findViewById(R.id.cardsContainer)

@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To Go!"
+            android:text="Student Groups"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -41,27 +41,27 @@
         android:gravity="center"
         android:textSize="20dp"
         android:paddingTop="10dp"
-        android:text="Tap an entry to see more details"
+        android:text="Tap a student groups for more details"
         android:textColor="@android:color/black"/>
     
-<!--    Scrollable Content  -->
+    <!--    Scrollable Content  -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/infoText">
         
-    <!-- Dynamic Cards with alternating background colors -->
-    <LinearLayout
-        android:id="@+id/cardsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/infoText"
-        android:orientation="vertical"
-        android:padding="16dp">
+        <!-- Dynamic Cards with alternating background colors -->
+        <LinearLayout
+            android:id="@+id/cardsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoText"
+            android:orientation="vertical"
+            android:padding="16dp">
+            
+            <!-- Add more CardViews dynamically based on the data from the database -->
         
-        <!-- Add more CardViews dynamically based on the data from the database -->
-    
-    </LinearLayout>
+        </LinearLayout>
     
     </ScrollView>
     
