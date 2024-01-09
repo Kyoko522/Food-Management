@@ -6,7 +6,7 @@
     android:backgroundTint="@color/bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white">
-    
+
     <!-- Top Bar with "to go!" and Logo -->
     <RelativeLayout
         android:id="@+id/topBar"
@@ -14,24 +14,24 @@
         android:layout_height="wrap_content"
         android:background="@color/dark_green"
         android:padding="16dp">
-        
+
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:src="@drawable/logo" />
-        
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To Go!"
+            android:text="Student Groups"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
-    
+
     </RelativeLayout>
-    
+
     <!-- Information text below the top bar -->
     <TextView
         android:id="@+id/infoText"
@@ -41,30 +41,30 @@
         android:gravity="center"
         android:textSize="20dp"
         android:paddingTop="10dp"
-        android:text="Tap an entry to see more details"
+        android:text="Tap a student groups for more details"
         android:textColor="@android:color/black"/>
-    
-<!--    Scrollable Content  -->
+
+    <!--    Scrollable Content  -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/infoText">
-        
-    <!-- Dynamic Cards with alternating background colors -->
-    <LinearLayout
-        android:id="@+id/cardsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/infoText"
-        android:orientation="vertical"
-        android:padding="16dp">
-        
-        <!-- Add more CardViews dynamically based on the data from the database -->
-    
-    </LinearLayout>
-    
+
+        <!-- Dynamic Cards with alternating background colors -->
+        <LinearLayout
+            android:id="@+id/cardsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoText"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Add more CardViews dynamically based on the data from the database -->
+
+        </LinearLayout>
+
     </ScrollView>
-    
+
     <!-- Bottom Bar -->
     <LinearLayout
         android:id="@+id/bottomBar"
@@ -73,7 +73,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/dark_green"
         android:orientation="horizontal">
-        
+
         <!-- Button 1 -->
         <Button
             android:layout_width="0dp"
@@ -83,7 +83,7 @@
             android:id="@+id/to_home"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-        
+
         <!-- Vertical Line -->
         <View
             android:layout_width="1dp"
@@ -91,7 +91,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@android:color/darker_gray" />
-        
+
         <!-- Button 2 -->
         <Button
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
             android:id="@+id/to_groups"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-        
+
         <!-- Vertical Line -->
         <View
             android:layout_width="1dp"
@@ -109,7 +109,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@android:color/darker_gray" />
-        
+
         <!-- Button 3 -->
         <Button
             android:layout_width="0dp"
@@ -119,7 +119,7 @@
             android:id="@+id/to_profile"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-    
+
     </LinearLayout>
 
 </RelativeLayout>

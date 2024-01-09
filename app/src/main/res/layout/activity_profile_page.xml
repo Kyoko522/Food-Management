@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_profile"
+    tools:context=".profile_page"
     android:background="@color/bg">
-    
+
     <!-- Top Bar with "to go!" and Logo -->
     <RelativeLayout
         android:id="@+id/topBar"
@@ -14,14 +14,14 @@
         android:layout_height="wrap_content"
         android:background="@color/dark_green"
         android:padding="16dp">
-        
+
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:src="@drawable/logo" />
-        
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,9 +29,9 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
-    
+
     </RelativeLayout>
-    
+
     <!-- Profile Image -->
     <ImageView
         android:id="@+id/profileImage"
@@ -41,7 +41,7 @@
         android:layout_below="@id/topBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
-    
+
     <!-- Username -->
     <TextView
         android:id="@+id/username"
@@ -52,7 +52,7 @@
         android:layout_below="@id/profileImage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp" />
-    
+
     <!-- Edit Profile Button -->
     <Button
         android:id="@+id/editProfileButton"
@@ -64,7 +64,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
-    
+
     <!-- Status Button -->
     <Button
         android:id="@+id/statusButton"
@@ -76,7 +76,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
-    
+
     <!-- Settings Button -->
     <Button
         android:id="@+id/settingsButton"
@@ -88,7 +88,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
-    
+
     <!-- Invite a Friend Button -->
     <Button
         android:id="@+id/inviteButton"
@@ -100,7 +100,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
-    
+
     <!-- Help Button -->
     <Button
         android:id="@+id/helpButton"
@@ -112,7 +112,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
-    
+
     <!-- Bottom Bar -->
     <LinearLayout
         android:id="@+id/bottomBar"
@@ -121,17 +121,17 @@
         android:layout_alignParentBottom="true"
         android:background="@color/dark_green"
         android:orientation="horizontal">
-        
+
         <!-- Button 1 -->
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Home"
-            android:id="@+id/go_home"
+            android:id="@+id/to_home"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-        
+
         <!-- Vertical Line -->
         <View
             android:layout_width="1dp"
@@ -139,17 +139,17 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@android:color/darker_gray" />
-        
+
         <!-- Button 2 -->
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Groups"
-            android:id="@+id/groups_page"
+            android:id="@+id/to_groups"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-        
+
         <!-- Vertical Line -->
         <View
             android:layout_width="1dp"
@@ -157,7 +157,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:background="@android:color/darker_gray" />
-        
+
         <!-- Button 3 -->
         <Button
             android:layout_width="0dp"
@@ -167,7 +167,7 @@
             android:id="@+id/to_profile"
             android:textColor="@android:color/white"
             android:background="@android:color/transparent" />
-    
+
     </LinearLayout>
 
 </RelativeLayout>

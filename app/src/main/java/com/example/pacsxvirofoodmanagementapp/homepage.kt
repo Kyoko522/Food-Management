@@ -17,18 +17,18 @@ class homepage : AppCompatActivity() {
         setContentView(R.layout.activity_homepage)
 
         //going to the profile page
-        val to_profile: Button = this.findViewById(R.id.profileButton)
+        val to_profile: Button = this.findViewById(R.id.to_profile)
         to_profile.setOnClickListener {
-            val intent = Intent(this, activity_profile::class.java)
+            val intent = Intent(this, profile_page::class.java)
             startActivity(intent)
         }
 
         //going to the groups page
-//        val groups_but: Button = this.findViewById(R.id.to_groups)
-//        groups_but.setOnClickListener {
-//            val intent = Intent(this, student_groups::class.java)
-//            startActivity(intent)
-//        }
+        val groups_but: Button = this.findViewById(R.id.to_groups)
+        groups_but.setOnClickListener {
+            val intent = Intent(this, groups_page::class.java)
+            startActivity(intent)
+        }
 
         //already on the homepage
         val home_but: Button = findViewById(R.id.to_home)
