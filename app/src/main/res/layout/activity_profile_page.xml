@@ -63,7 +63,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+        android:backgroundTint="@color/dark_green"
+        android:layout_centerHorizontal="true" /> <!-- Centered horizontally -->
 
     <!-- Status Button -->
     <Button
@@ -75,7 +76,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+        android:backgroundTint="@color/dark_green"
+        android:layout_centerHorizontal="true" /> <!-- Centered horizontally -->
 
     <!-- Settings Button -->
     <Button
@@ -87,7 +89,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+        android:backgroundTint="@color/dark_green"
+        android:layout_centerHorizontal="true" /> <!-- Centered horizontally -->
 
     <!-- Invite a Friend Button -->
     <Button
@@ -99,7 +102,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+        android:backgroundTint="@color/dark_green"
+        android:layout_centerHorizontal="true" /> <!-- Centered horizontally -->
 
     <!-- Help Button -->
     <Button
@@ -111,7 +115,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:backgroundTint="@color/dark_green" /> <!-- Light green color -->
+        android:backgroundTint="@color/dark_green"
+        android:layout_centerHorizontal="true" /> <!-- Centered horizontally -->
 
     <!-- Bottom Bar -->
     <LinearLayout
