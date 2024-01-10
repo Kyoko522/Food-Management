@@ -1,0 +1,99 @@
+<!-- res/layout/card_item.xml -->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp">
+    
+    <!-- Root layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_green">
+        
+        <!-- Image on the left -->
+        <ImageView
+            android:id="@+id/groupImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logo" />
+        
+        <!-- Card Content -->
+        <LinearLayout
+            android:id="@+id/cardContentLayout"
+            android:layout_width="297dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/groupImage"
+            android:background="@color/light_green"
+            android:orientation="vertical"
+            android:padding="16dp">
+            
+            <!-- Existing TextViews -->
+            
+            <TextView
+                android:id="@+id/shortName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="short Name:"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/longName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="long Name"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="description"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="faculty"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="school"
+                android:textColor="@color/black" />
+            
+            <!-- Image inside the LinearLayout -->
+            <ImageView
+                android:id="@+id/extraImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp" />
+        
+        </LinearLayout>
+        
+        <!-- Get Notified Button (Below the school TextView) -->
+        <Button
+            android:id="@+id/getNotifiedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Notified"
+            android:backgroundTint="@color/dark_green"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/cardContentLayout"
+            android:layout_alignStart="@+id/cardContentLayout"
+            android:layout_marginTop="16dp"/>
+        
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
