@@ -1,8 +1,8 @@
-# PACSxVIRO Food Management App
+# Food Management App
 
 ## Overview
 
-Welcome to the PACSxVIRO Food Management App – an initiative by the Practical Application of Computer Science (PACS) club in collaboration with VIRO. This Android application aims to reduce food waste by connecting event organizers with students and club members interested in receiving surplus food after events. The app facilitates a sustainable solution, ensuring that excess food doesn't go to waste and benefits those in need.
+Welcome to the Food Management App – an initiative by the Practical Application of Computer Science (PACS) club in collaboration with VIRO. This Android application aims to reduce food waste by connecting event organizers with students and club members interested in receiving surplus food after events. The app facilitates a sustainable solution, ensuring that excess food doesn't go to waste and benefits those in need.
 
 ### Features
 
