@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity() {
 
 
         login_button.setOnClickListener {
+//            remove this when trying to use login page (Temporary to skip login page and test homepage layout)
+            val intent1 = Intent(this,homepage::class.java)
+            startActivity(intent1)
 
             val username = username_editfield.text.toString()
             val password = password_editfield.text.toString()

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -56,6 +57,9 @@ class homepage : AppCompatActivity() {
             val cardView = createCardView(cardData, index)
 
             cardsContainer.addView(cardView)
+
+            val layoutParams = cardView.layoutParams as ViewGroup.MarginLayoutParams
+            layoutParams.bottomMargin = resources.getDimensionPixelSize(R.dimen.card_margin_bottom)
         }
     }
 
